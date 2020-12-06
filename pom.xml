@@ -72,4 +72,11 @@
       </plugins>
     </pluginManagement>
   </build>
+  
+  <repository>
+      <id>devops</id>
+      <name>test_maven_hosted</name>
+      <url>http://54.198.132.105:8081/repository/test_maven_hosted/</url>
+    </repository>
+  
 </project>
