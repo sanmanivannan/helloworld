@@ -7,15 +7,38 @@ pipeline {
       }
     }
 
-    stage('Compile') {
-      steps {
-        sh 'echo "compile step"'
+    stage('Unit Test') {
+      parallel {
+        stage('Unit Test') {
+          steps {
+            sh 'echo "compile step"'
+          }
+        }
+
+        stage('Integrtaion Test') {
+          steps {
+            sh 'echo "Integration Step"'
+          }
+        }
+
+        stage('Performance Test') {
+          steps {
+            sh 'echo "Performance Test"'
+          }
+        }
+
       }
     }
 
     stage('package') {
       steps {
         sh 'echo "package done"'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'echo "Deploy to Prod"'
       }
     }
 
