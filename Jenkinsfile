@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Validate') {
       steps {
-        git(url: 'git \'https://github.com/sanmanivannan/helloworld.git\'', branch: 'master')
+       // git(url: 'git \'https://github.com/sanmanivannan/helloworld.git\'', branch: 'master')
         sh 'echo "validate step"'
       }
     }
