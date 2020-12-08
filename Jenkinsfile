@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('Validate') {
       steps {
- 
         sh 'echo "validate step"'
       }
     }
