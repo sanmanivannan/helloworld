@@ -12,7 +12,6 @@ pipeline {
         stage('Unit Test') {
           steps {
             sh 'echo "compile step"'
-            junit 'target/**/*.xml'
           }
         }
 
