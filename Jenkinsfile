@@ -37,6 +37,9 @@ pipeline {
     }
 
     stage('Deploy') {
+      when{
+      branch 'master'
+      }
       steps {
         sh 'echo "Deploy to Prod"'
       }
