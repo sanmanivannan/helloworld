@@ -42,6 +42,7 @@ pipeline {
       }
       steps {
         sh 'echo "Deploy to Prod"'
+        input(message: 'Ready?', ok: 'Yes')
       }
     }
 
