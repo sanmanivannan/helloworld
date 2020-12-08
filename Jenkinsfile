@@ -12,6 +12,7 @@ pipeline {
         stage('Unit Test') {
           steps {
             sh 'echo "compile step"'
+            junit 'target/**/*.xml'
           }
         }
 
@@ -24,6 +25,7 @@ pipeline {
         stage('Performance Test') {
           steps {
             sh 'echo "Performance Test"'
+            timeout(time: 30)
           }
         }
 
@@ -37,8 +39,8 @@ pipeline {
     }
 
     stage('Deploy') {
-      when{
-      branch 'master'
+      when {
+        branch 'master'
       }
       steps {
         sh 'echo "Deploy to Prod"'
