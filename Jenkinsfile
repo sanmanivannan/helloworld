@@ -15,7 +15,7 @@ pipeline {
 
     stage('package') {
       steps {
-        build 'package'
+        sh 'echo "package done"'
       }
     }
 
