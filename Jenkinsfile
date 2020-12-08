@@ -4,6 +4,7 @@ pipeline {
     stage('Validate') {
       steps {
         sh 'echo "validate step"'
+        git(url: 'git \'https://github.com/sanmanivannan/helloworld.git\'', branch: 'master')
       }
     }
 
