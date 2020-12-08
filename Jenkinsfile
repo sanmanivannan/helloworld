@@ -41,8 +41,9 @@ pipeline {
         branch 'master'
       }
       steps {
-        sh 'echo "Deploy to Prod"'
         input(message: 'Ready?', ok: 'Yes')
+        sh 'echo "Deploy to Prod"'
+        
       }
     }
 
